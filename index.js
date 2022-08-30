@@ -69,7 +69,4 @@ function startZero() {
     return result
 } 
 
-let player =  startZero
-console.log(player);
-
 startZero();
