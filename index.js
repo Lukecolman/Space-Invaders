@@ -70,3 +70,29 @@ function startZero() {
 } 
 
 startZero();
+
+
+
+//Arrays para usar más adelante
+//////////////////////////////////////////////////////////////
+
+//Lista de items
+
+let items = [
+    dualShot,
+    shield,
+    boomerangShot,
+    rapidFire
+
+];
+
+//Lista de Enemigos
+
+let enemigos = [
+    basicEnemie,
+    speedEnemie,
+    tankEnemie,
+    shootingEnemie
+
+];
+
