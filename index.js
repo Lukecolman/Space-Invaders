@@ -37,6 +37,8 @@ alert("Por favor, ingrese un nombre");
 }, 1000);
 */
 
+
+// Ingreso lo que es un nuevo USUARIO y además permito que seleccione su dificultad
 function startZero() {
     let playerName = prompt("Hola Jugador! Ingresa tu nombre");
     if(playerName == null || playerName == ""){
@@ -78,7 +80,7 @@ startZero();
 
 //Lista de items
 
-let items = [
+let item = [
     dualShot,
     shield,
     boomerangShot,
@@ -95,4 +97,28 @@ let enemigos = [
     shootingEnemie
 
 ];
+
+
+
+//Clases para generar Enemigos e Items
+
+class newEnemie{
+    constructor(enemieName, size, power, health, speed) {
+        this.enemieName = enemieName;
+        this.size = size;
+        this.power = power;
+        this.health = health;
+        this.speed = speed;
+        }
+    };
+
+class newItems{
+    constructor(name, powerType, duration){
+        this.name = name;
+        this.powerType = powerType;
+        this.duration = duration;
+    }
+}
+
+
 
