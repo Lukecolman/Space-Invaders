@@ -38,16 +38,16 @@ alert("Por favor, ingrese un nombre");
 */
 
 //INTENTANDO INTERACTUAR CON EL DOM
- /*
-let cosito = document.getElementById("playerName")
-let playername = "";
-cosito.innerHTML = "Bienvenido " + playerName
-*/
+//saque el prompt del function para poder usarlo por fuera
+let playerName = prompt("Hola Jugador! Ingresa tu nombre");
+
+
+let saludoFinal = document.getElementById("saludo").innerHTML = "Bienvenido " + playerName;
+
 
 
 // Ingreso lo que es un nuevo USUARIO y además permito que seleccione su dificultad
 function startZero() {
-    let playerName = prompt("Hola Jugador! Ingresa tu nombre");
     if(playerName == null || playerName == ""){
     alert("Por favor, ingrese un nombre");
     } else {
