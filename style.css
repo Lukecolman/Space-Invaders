@@ -623,6 +623,17 @@ h2 {
 }
 
 
+#playerName{
+    font-size: 40px;
+    color: white;
+    font-family: "upheaval_tt_brkregular", 'Silkscreen';
+    font-size: 10em;
+    text-align: center;
+    line-height: .7em;
+    margin-bottom: 0em;
+    z-index: 100;
+    letter-spacing: 7px;
+}
 
 /*//////////////////////////////////*/
 

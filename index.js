@@ -37,6 +37,13 @@ alert("Por favor, ingrese un nombre");
 }, 1000);
 */
 
+//INTENTANDO INTERACTUAR CON EL DOM
+ /*
+let cosito = document.getElementById("playerName")
+let playername = "";
+cosito.innerHTML = "Bienvenido " + playerName
+*/
+
 
 // Ingreso lo que es un nuevo USUARIO y además permito que seleccione su dificultad
 function startZero() {
@@ -72,7 +79,6 @@ function startZero() {
 } 
 
 startZero();
-
 
 
 //Arrays para usar más adelante
