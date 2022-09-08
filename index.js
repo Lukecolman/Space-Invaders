@@ -128,3 +128,15 @@ class newItems{
 
 
 
+//se agrega un forEach para ver las opciones del menu principal
+
+const menuOptions = [
+    "PLAY",
+    "OPTIONS",
+    "RANKINGS",
+    "CREDITS"
+    
+]
+
+menuOptions.forEach((menu) => {console.log(menu)})
+
