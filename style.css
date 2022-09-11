@@ -638,6 +638,18 @@ h2 {
 /*//////////////////////////////////*/
 
 
+.avisoTecla
+{
+    color: white;
+    font-family: "upheaval_tt_brkregular", 'Silkscreen';
+    font-size: 3em;
+    text-align: center;
+    z-index: 100;
+    letter-spacing: 7px;
+    margin-top: -50px;
+
+}
+
 .center{
 text-align: center;
 
