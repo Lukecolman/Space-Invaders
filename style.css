@@ -6,12 +6,14 @@
     font-style: normal;
 
 }
+
 body {
     height: 100%;
     overflow: hidden;
     background: rgb(38,48,98);
 background: radial-gradient(circle, rgba(38,48,98,1) 0%, rgba(0,0,0,1) 100%);
 }
+
 
 h1 {
     font-family: "upheaval_tt_brkregular", 'Silkscreen';
@@ -48,6 +50,11 @@ h2 {
 
 }
 
+#canvas{
+    z-index: 110;
+    box-shadow: black 20px 10px 50px;
+}
+
 #title {
     margin-top: -100px;
     margin-bottom: -450px;
@@ -55,6 +62,10 @@ h2 {
 
 
 /* STARS */
+/*Resuelve el movimiento de la pagina cuando se refresca*/
+.wrapper {
+    position: fixed;
+}
 
 #stars {
     width: 1px;
@@ -660,3 +671,4 @@ canvas {
     background-color: #fff;
 
 }
+

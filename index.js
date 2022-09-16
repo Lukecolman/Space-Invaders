@@ -37,23 +37,14 @@ alert("Por favor, ingrese un nombre");
 }, 1000);
 */
 
+
 //INTENTANDO INTERACTUAR CON EL DOM
 //saque el prompt del function para poder usarlo por fuera
+
+
 let playerName = prompt("Hola Jugador! Ingresa tu nombre");
 
-
 let saludoFinal = document.getElementById("saludo").innerHTML = "Bienvenido " + playerName;
-
-
-//EVENTOS
-
-let pizarra = document.querySelector(".avisoTecla")
-
-window.addEventListener("keydown", function (event) {console.log(event)
-       pizarra.innerHTML = event.key + " - " +event.keyCode;
- },false);
-
-
 
 //Arrays para usar más adelante
 //////////////////////////////////////////////////////////////
@@ -148,3 +139,5 @@ function startZero() {
 } 
 
 startZero();
+
+
