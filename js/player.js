@@ -31,6 +31,11 @@ class Player {
         ctx.fillStyle = "blue"
         ctx.fillRect(this.position.x, this.position.y, this.width, this.height)
     }   
+
+    movement (){
+        this.draw()
+        this.position.x += this.velocity.x
+    }
 }
 
 
@@ -42,7 +47,7 @@ function animate() {
     requestAnimationFrame(animate)
     ctx.fillStyle = "red"
     ctx.fillRect(0, 0, canvas.width, canvas.height)
-    player.draw()
+    player.movement()
 }
 
 animate()
@@ -63,9 +68,12 @@ addEventListener("keydown", ({key}) => {
     switch (key) {
         case "a":
             console.log("funciona a");
+            player.velocity.x = -10
             break;
         case "d":
             console.log("funciona d");
+            player.velocity.x = 10
+
         break;
         case "ArrowLeft":
             console.log("funciona <-")
