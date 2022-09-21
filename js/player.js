@@ -102,7 +102,7 @@ addEventListener("keydown", ({key}) => {
 });
 
 addEventListener("keyup", ({key}) => {
-    // console.log(key + " test fase 1")
+    // console.log(key + " test fase 2")
     switch (key) {
         case "a":
         case "ArrowLeft":
@@ -120,4 +120,4 @@ addEventListener("keyup", ({key}) => {
 });
 
 
-// se que los colores estan horribles pero es para poder guiarme
+//se que los colores estan horribles pero es para poder guiarme
