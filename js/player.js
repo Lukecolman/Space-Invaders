@@ -42,12 +42,32 @@ class Player {
 const player = new Player()
 player.draw()
 
+// monitor de teclas
+const keya = {
+    a: {
+        pressed: false
+    },
+    d: {
+        pressed: false
+    }
+}
+
+
 // uso esta funcion para poder dibujar el fondo y para que se pueda volver a dibujar el personaje por arriba
 function animate() {
     requestAnimationFrame(animate)
     ctx.fillStyle = "red"
     ctx.fillRect(0, 0, canvas.width, canvas.height)
     player.movement()
+
+    if (keya.a.pressed && player.position.x >= 0){
+        player.velocity.x = -10
+    } else if (keya.d.pressed && player.position.x <= canvas.width - player.width) {
+        player.velocity.x =  10
+    }
+    else {
+        player.velocity.x = 0
+    }
 }
 
 animate()
@@ -67,19 +87,34 @@ addEventListener("keydown", ({key}) => {
     // console.log(key + " test fase 1")
     switch (key) {
         case "a":
+        case "ArrowLeft":
+        case "A":        
             console.log("funciona a");
-            player.velocity.x = -10
+            keya.a.pressed = true;
             break;
         case "d":
-            console.log("funciona d");
-            player.velocity.x = 10
-
-        break;
-        case "ArrowLeft":
-            console.log("funciona <-")
-        break;
         case "ArrowRight":
-            console.log("funciona ->")
+        case "D":
+            console.log("funciona d");
+            keya.d.pressed = true;
+        break;
+    }
+});
+
+addEventListener("keyup", ({key}) => {
+    // console.log(key + " test fase 1")
+    switch (key) {
+        case "a":
+        case "ArrowLeft":
+        case "A":        
+            console.log("funciona a");
+            keya.a.pressed = false;
+            break;
+        case "d":
+        case "ArrowRight":
+        case "D":
+        console.log("funciona d");
+        keya.d.pressed = false;
         break;
     }
 });
