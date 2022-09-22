@@ -6,7 +6,9 @@
     font-style: normal;
 
 }
-
+a{
+    text-decoration: none;
+}
 body {
     height: 100%;
     overflow: hidden;
@@ -14,6 +16,71 @@ body {
 background: radial-gradient(circle, rgba(38,48,98,1) 0%, rgba(0,0,0,1) 100%);
 }
 
+.txt{
+    font-family: "upheaval_tt_brkregular", 'Silkscreen';
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    z-index: 100;
+    letter-spacing: 2px;
+    display: inline-block;
+    padding: 5px;
+    margin: 0 0 -10px 0;   
+    /* background-color: red;  */
+}
+
+input {
+    font-size: 2em;
+    text-align: center;
+    letter-spacing: 2px;
+    background-color: transparent;
+    border-color: transparent;
+    font-family: "upheaval_tt_brkregular", 'Silkscreen';
+    width: 80px;
+    padding: 3px;
+    color: white;
+    text-decoration-line: underline;  
+    visibility: visible;
+    animation: blink .7s step-start 0s infinite;
+    
+}
+::placeholder {
+    color: white;
+}  
+
+
+input:focus{
+
+    outline: none;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.0;
+        }
+}
+
+
+
+
+#startingMenu{
+    margin: 5em 0;
+}
+.botonMenu{
+    font-family: "upheaval_tt_brkregular", 'Silkscreen';
+    color: white;
+    font-size: 3.5em;
+    text-align: center;
+    z-index: 100;
+    letter-spacing: 2px;
+    display: inline-block;
+    padding: 5px;
+    margin: 5px 0px;   
+    /* background-color: red;  */
+}
+.botonMenu:hover{
+    color: gray;
+}
 
 h1 {
     font-family: "upheaval_tt_brkregular", 'Silkscreen';
@@ -43,7 +110,7 @@ h2 {
     line-height: .7em;
     position: relative;
     /*background-color: bisque    ;*/
-    top: -431px;
+    top: -425px;
     left: -12px;
     z-index: -1;
     letter-spacing: 7px;
@@ -56,7 +123,7 @@ h2 {
 }
 
 #title {
-    margin-top: -100px;
+    margin-top: -30px;
     margin-bottom: -450px;
 }
 
@@ -659,8 +726,7 @@ h2 {
     text-align: center;
     z-index: 100;
     letter-spacing: 7px;
-    margin-top: -50px;
-
+    margin: 20px;
 }
 
 .center{

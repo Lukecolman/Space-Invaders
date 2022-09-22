@@ -74,17 +74,18 @@ animate()
 
 //EVENTOS
 
-let pizarra = document.querySelector(".avisoTecla")
+let keyAlert = document.querySelector(".avisoTecla")
 
 window.addEventListener("keydown", function (event) {
     console.log(event)
-    pizarra.innerHTML = event.key + " - " +event.keyCode;
+    keyAlert.innerHTML = event.key + " - " +event.keyCode;
 },false);
 
 
 // Agrego un nuevo event listener para el movimiento del personaje + arrow function
 addEventListener("keydown", ({key}) => {
     // console.log(key + " test fase 1")
+    // verifico que se pueda mover ya sea con mayusculas, minusculas o flechas (si, dependia del block mayus, casi rompo todo)
     switch (key) {
         case "a":
         case "ArrowLeft":
