@@ -8,7 +8,8 @@ const idForm = document.getElementById('form');
 
 // STORAGE
 
-function form2() {
+function form2(e) {
+    event.preventDefault();
     if (localStorage.getItem("score")){
         idForm.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -21,6 +22,10 @@ function form2() {
     } else {
         localStorage.setItem("score", JSON.stringify([]));
         console.log("nofuncionapapa")
+                let a = JSON.parse( localStorage.getItem("score"))
+        a.push(username.value);
+        localStorage.setItem("score", JSON.stringify(a))
+        console.log("funciona")
     }
 
 }
