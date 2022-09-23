@@ -30,10 +30,10 @@
         <div>
             <p class="txt">ingresa tu nombre</p>
             <br>
-            <form>
+            <form onsubmit="form2()" id="form">
                 <!-- De momento solo va a guardar el nombre, al terminar el juego se movera al final para poder guardar el puntaje -->
-                <input class= "blink" id="username" name="username" type="text" maxlength = "3" placeholder="AAA">
-                <button type="submit" class="btn" id="saveScoreBtn" onclick="saveHighScore(event)" disabled>ok</button>
+                <input class= "blink" id="username" name="username" type="text" maxlength = "3" placeholder="AAA" required>
+                <button type="submit" class="btn" id="saveScoreBtn"  >ok</button>
             </form>
         </div>
         <div id="startingMenu">
