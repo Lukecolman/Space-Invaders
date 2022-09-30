@@ -2,7 +2,7 @@ const username = document.getElementById('username');
 const saveScoreBtn = document.getElementById('saveScoreBtn');
 const highScoreList = document.getElementById('highScoreList');
 const button = document.getElementById('saveScoreBtn');
-localStorage.setItem("username", username.value);
+// localStorage.setItem("username", username.value);
 const idForm = document.getElementById('form');
 
 
@@ -52,17 +52,54 @@ function getLocalStorage (){
 // console.log(username)
 
 
-// aca evito que me modifique la url al mandar el form
-saveScoreBtn = e => {
-    // console.log ("funciona?");
-    e.preventDefault();
-    // console.log(username.value)
+// // aca evito que me modifique la url al mandar el form
+// saveScoreBtn = e => {
+//     // console.log ("funciona?");
+//     e.preventDefault();
+//     // console.log(username.value)
 
-    const score = {
-        // score: acaVoyAPonerElScore,
-        name: username.value,
+//     let score = {
+//         // score: acaVoyAPonerElScore,
+//         name: username.value,
+//     }
+// }
+
+
+
+
+
+
+console.log("estamos andando?2")
+
+// Llamo al Json y modifico el DOM para agregar una UL y respectivos LI dentro de un DIV determinado
+async function scoreList(){
+    const scores = await fetch("../json/score-table.json").then(res => res.json())
+
+
+
+    let list = document.createElement('ul');
+    console.log(scores)
+    for(let i = 0; i < scores.length; i++) {
+        console.log("quepuerco")
+        let item = document.createElement('li');
+        item.appendChild(document.createTextNode(scores[i].name + "............."));
+        item.appendChild(document.createTextNode(scores[i].score));
+
+        // list.appendChild(item);
+        // item.innerHTML = "hola" 
+        list.appendChild(item);
+        // le quito los puntos a la lista
+        list.style.listStyle = "none"; 
     }
+    
+
+    
+    document.getElementById('scoreList').appendChild(list);
+
 }
 
+scoreList()
+
+console.log("esto esta funcionando?")
 
 

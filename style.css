@@ -733,10 +733,13 @@ h2 {
 text-align: center;
 
 }
-/*
-canvas {
 
-    background-color: #fff;
-
+#scoreList {
+    color: white;
+    text-align: center;
+    font-family: "upheaval_tt_brkregular", 'Silkscreen';
+    font-size: 3.5em;
+    letter-spacing: 7px;
+padding-top: 20px;
+list-style: decimal;
 }
-
