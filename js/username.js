@@ -4,27 +4,31 @@ const highScoreList = document.getElementById('highScoreList');
 const button = document.getElementById('saveScoreBtn');
 // localStorage.setItem("username", username.value);
 const idForm = document.getElementById('form');
-
-
+const formDiv = document.getElementById('formDiv')
 // STORAGE
 
 function form2(e) {
     event.preventDefault();
-    if (localStorage.getItem("score")){
+    if (localStorage.getItem("playerName")){
         idForm.addEventListener("submit", (e) => {
-        e.preventDefault();
+            e.preventDefault();
+
         })
 
-        let a = JSON.parse( localStorage.getItem("score"))
+        let a = JSON.parse( localStorage.getItem("playerName"))
         a.push(username.value);
-        localStorage.setItem("score", JSON.stringify(a))
-        console.log("funciona")
+        localStorage.setItem("playerName", JSON.stringify(a))
+        formDiv.hidden = true; //esconde el form
+        console.log("aca se esconde")
+
+        
+
     } else {
-        localStorage.setItem("score", JSON.stringify([]));
+        localStorage.setItem("playerName", JSON.stringify([]));
         console.log("nofuncionapapa")
-                let a = JSON.parse( localStorage.getItem("score"))
+                let a = JSON.parse( localStorage.getItem("playerName"))
         a.push(username.value);
-        localStorage.setItem("score", JSON.stringify(a))
+        localStorage.setItem("playerName", JSON.stringify(a))
         console.log("funciona")
     }
 

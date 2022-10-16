@@ -1,8 +1,8 @@
 [
-    {"name": "LAC","score": "9999"},
-    {"name": "IAF","score": "8888"},
-    {"name": "GEF","score": "7777"},
-    {"name": "GFB","score": "6666"},
-    {"name": "JPH","score": "5555"},
-    {"name": "FMS","score": "4444"}
+    {"name": "LAC","score": "900"},
+    {"name": "IAF","score": "800"},
+    {"name": "GEF","score": "700"},
+    {"name": "GFB","score": "600"},
+    {"name": "JPH","score": "500"},
+    {"name": "FMS","score": "400"}
 ]
