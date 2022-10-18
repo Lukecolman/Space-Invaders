@@ -23,7 +23,7 @@ export default class player extends Phaser.Physics.Arcade.Sprite {
         .setGravityY(0)
         .setScale(2)
         .setDepth(2)
-        // .body.setSize(35,66,35,30); // mascara personalizada => setSize(width, height, XinSprite, YinSprite)
+        .body.setSize(25,30,25,0); // mascara personalizada => setSize(width, height, XinSprite, YinSprite)
     }
 
 //animaciones del jugador
@@ -32,24 +32,27 @@ export default class player extends Phaser.Physics.Arcade.Sprite {
     animatePlayer() {
         this.anims.create({
             key: 'left',
-            frames: this.anims.generateFrameNumbers('spaceShip', { start: 0, end: 3 }),
-            frameRate: 10,
+            // frames: this.anims.generateFrameNumbers('spaceShip', { start: 0, end: 1 }),
+            // frameRate: 0,
+            frames: [{ key: 'spaceShip', frame: 1 }],
+
             repeat: -1
         });
 
         this.anims.create({
-            key: 'turn',
-            frames: [{ key: 'spaceShip', frame: 4 }],
+            key: 'top',
+            frames: [{ key: 'spaceShip', frame: 2 }],
             frameRate: 20,
+        });
+
+        this.anims.create({
+            key: 'right',
+            // frames: this.anims.generateFrameNumbers('spaceShip', { start: 3, end: 4 }),
+            frames: [{ key: 'spaceShip', frame: 3 }],
+            repeat: -1,
             // delay: 1.1
         });
 
-        // this.anims.create({
-        //     key: 'right',
-        //     frames: this.anims.generateFrameNumbers('spaceShip', { start: 5, end: 8 }),
-        //     frameRate: 10,
-        //     repeat: -1
-        // });
 
     }
 }

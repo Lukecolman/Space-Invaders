@@ -10,9 +10,8 @@ export default class bullet extends Phaser.Physics.Arcade.Group {
             .setActive(true)
             .setVisible(true)
             .setScale(0.5)
-
             .setDepth(2);
-        item.body.velocity.y = -200;
+        item.body.velocity.y = -300;
         item.outOfBoundsKill = true;
     }
 

@@ -1,8 +1,11 @@
 [
-    {"name": "LAC","score": "900"},
-    {"name": "IAF","score": "800"},
-    {"name": "GEF","score": "700"},
-    {"name": "GFB","score": "600"},
-    {"name": "JPH","score": "500"},
-    {"name": "FMS","score": "400"}
+    {"name": "LAC","score": "90000"},
+    {"name": "IAF","score": "80000"},
+    {"name": "GEF","score": "70000"},
+    {"name": "JPH","score": "50000"},
+    {"name": "GFB","score": "60000"},
+    {"name": "PPR","score": "40000"},
+    {"name": "MEH","score": "30000"},
+    {"name": "IMR","score": "20000"},
+    {"name": "FMS","score": "10000"}
 ]

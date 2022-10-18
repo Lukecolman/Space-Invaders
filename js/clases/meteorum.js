@@ -8,16 +8,19 @@ export default class meteorum extends Phaser.Physics.Arcade.Group {
 
     newItem(){
         this.create(
-                    Phaser.Math.Between(0, this.scene.scale.width), 80, 'meteorum')
+                    Phaser.Math.Between(0, this.scene.scale.width - 100), -200, 'meteorum')
                     .setActive(true)
                     .setVisible(true)
-                    .setGravityY(400)
-                    .setCollideWorldBounds(true)
+                    .setGravityY(0)
+                    .setCollideWorldBounds(false)
                     .setDepth(2)
-                    .setCircle(32)
-                    .setBounce(1, 1)
-                    .setVelocityX((Phaser.Math.Between(0, 1) ? 180 : -180))
-                    .hitsToKill = 4;
+                    .setScale(2)
+                    .setBounce(0, 0)
+                    .setCircle(9,8,17,1)
+                    .setVelocityY((Phaser.Math.Between(0, 0) ? 0 : 380))
+                    .setAngle((-45))
+                    .hitsToKill = 1;
+                    
     }
 
     // preUpdate (time, delta)
