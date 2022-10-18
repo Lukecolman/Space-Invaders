@@ -87,7 +87,7 @@ class firstScene extends Phaser.Scene {
 
 
         // SPRITES
-        this.background = this.add.image(this.sys.game.canvas.width / 2, this.sys.game.canvas.height / 2, "background");
+        // this.background = this.add.image(this.sys.game.canvas.width / 2, this.sys.game.canvas.height / 2, "background");
         this.lifeSprite = this.add.image(30, 18, "life").setDepth(1);
         this.explosion = this.add.sprite(-100, -100, "explosion")
         .setScale(2);
