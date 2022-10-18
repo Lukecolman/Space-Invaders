@@ -26,7 +26,7 @@ class intro extends Phaser.Scene {
 
     create() {
 
-        this.introText = this.add.text(90 ,this.sys.game.canvas.height / 2 + 140,"PRESS 'SPACE' TO START", { 
+        this.introText = this.add.text(94 ,this.sys.game.canvas.height / 2 + 140,"PRESS 'SPACE' TO START", { 
             fontSize: "35px", 
             fontFamily: "upheaval_tt_brkregular",
             // , 'Silkscreen'),

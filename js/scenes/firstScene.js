@@ -269,9 +269,11 @@ class firstScene extends Phaser.Scene {
                 console.log(this.score);
 
                 // this.scene.restart();
-                this.scene.start("intro");
+                this.scene.start("credits");
                 // this.scene.start("Score");
+                
 
+    
 
             }
 

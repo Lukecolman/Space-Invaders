@@ -1,7 +1,7 @@
 // IMPORTAR LA PRIMERA ESCENA
 import intro from "./scenes/intro.js"
 import firstScene from "./scenes/firstScene.js"
-// import credits from "./scenes/credits.js"
+import credits from "./scenes/credits.js"
 // import Score from "./scenes/Score.js"
 
 let keyA;
@@ -22,7 +22,7 @@ const config = {
 
     // OBLIGATORIO
     type: Phaser.AUTO, // WEBGL O CANVAS O AUTOMATICO
-    backgroundColor: "#34495E", // FONDO DEL CANVAS
+    backgroundColor: "#2A2E50", // FONDO DEL CANVAS
     scale: {
         width: 600, // TAMAÑO DEL CANVAS
         height: 800,
@@ -57,7 +57,7 @@ const config = {
     scene: [
         intro,
         firstScene,
-        // credits
+        credits
         ]
 
 };
