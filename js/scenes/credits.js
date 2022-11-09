@@ -12,6 +12,7 @@ class credits extends Phaser.Scene {
     }
     preload ()
     {
+        this.load.spritesheet("starAnimation", "../../assets/sprites/starAnimation.png", { frameWidth: 21, frameHeight: 21});
 
     }
 
@@ -19,63 +20,128 @@ class credits extends Phaser.Scene {
     {
 
 
-        this.introText = this.add.text(70 ,this.sys.game.canvas.height / 2 + 140,
-        ["Staff",
+        this.introText = [
+            this.add.text(this.sys.game.canvas.width /2 ,this.sys.game.canvas.height / 2 + 340,
+        ["STAFF",
         "",
-        "desarrollo - Luke Colman",
+        "Desarrollo - Luke Colman",
         "",
         "Diseño - Luke Colman",
         "",
-        "dibujo - Luke Colman",
+        "Dibujo - Luke Colman",
         "",
-        "sound fx - Luke Colman",
+        "Sound FX - Luke Colman",
         "",
-        "animacion - Luke Colman",
+        "Animacion - Luke Colman",
         "",
-        "chistes varios - Luke Colman",
+        "Chistes varios - Luke Colman",
         "",
         "",
         "",
-        "agradecimientos especiales",
         "",
-        "las voces en mi cabeza",
+        "",
+        "AGRADECIMIENTOS ESPECIALES",
+        "",
+        "Las voces en mi cabeza",
+        "",
+        "",
+        "",
         "",
         "",
         "",
         "Gracias por jugar",
-        "",
-        "",
-        "",
-        "press 'space' to reload",
-
-
-
         ], { 
             fontSize: "28px", 
             fontFamily: "upheaval_tt_brkregular",
             // , 'Silkscreen'),
             fill: "white",
-        align: "center",});
+            align: "center",})  
+            .setOrigin(0.5),
+            ,
+
+            //////////////////////
+
+            // this.add.text(this.sys.game.canvas.width /2 ,this.sys.game.canvas.height / 2 + 540,
+            // [
+            // //     "STAFF",
+            // // "",
+            // "",
+            // "",
+            // "Desarrollo - Luke Colman",
+            // "",
+            // "Diseño - Luke Colman",
+            // "",
+            // "Dibujo - Luke Colman",
+            // "",
+            // "Sound FX - Luke Colman",
+            // "",
+            // "Animacion - Luke Colman",
+            // "",
+            // "Chistes varios - Luke Colman",
+            // "",
+            // "",
+            // "",
+            // "",
+            // "",
+            // "AGRADECIMIENTOS ESPECIALES",
+            // "",
+            // "Las voces en mi cabeza",
+            // "",
+            // "",
+            // "",
+            // "",
+            // "",
+            // "",
+            // "Gracias por jugar",
+            // ], { 
+            //     fontSize: "28px", 
+            //     fontFamily: "upheaval_tt_brkregular",
+            //     // , 'Silkscreen'),
+            //     fill: "white",
+            //     align: "center",})  
+            //     .setOrigin(0.5),
+
+
+        ]
+
+            // this.introText23 = this.add.text(this.sys.game.canvas.width /2 ,this.sys.game.canvas.height / 2 -380,
+            //                 "press 'space' to reload", { 
+            //     fontSize: "20px", 
+            //     fontFamily: "upheaval_tt_brkregular",
+            //     // , 'Silkscreen'),
+            //     fill: "white" })
+            //     .setOrigin(0.5);
 
             // tweens funciona para la interpolacion visible (parpadeos locos)
             this.tweens.add({
                 targets: this.introText,
-                alpha: 0.1,
+                // alpha: 0.1,
                 // yoyo: true,
-                            duration: 20000,
-
+                            duration: 20000, //20000
                 // repeat: -1, //-1 = infinito
                 // ease: 'Sine.easeInOut',
                 // duration: 350,
                 y: -750,
             });
 
-            this.introText2 = this.add.text(this.sys.game.canvas.height / 4.5 ,this.sys.game.canvas.height / 2 -380,
+            this.introText2 = [this.add.text(this.sys.game.canvas.width /2 ,this.sys.game.canvas.height / 2 -380,
                             "press 'space' to reload", { 
-                fontSize: "20px", 
+                fontSize: "20px",
                 fontFamily: "upheaval_tt_brkregular",
                 // , 'Silkscreen'),
-                fill: "white" }); 
+                fill: "white" })
+                .setOrigin(0.5),
+                ,
+                // this.add.text(this.sys.game.canvas.width /2 ,this.sys.game.canvas.height / 2 + 280,
+                // "press 'space' to reload", { 
+                //     fontSize: "20px",
+                //     fontFamily: "upheaval_tt_brkregular",
+                //     // , 'Silkscreen'),
+                //     fill: "white" })
+                //     .setOrigin(0.5),
+            ]
+
+
                 this.tweens.add({
                     targets: this.introText2,
                     alpha: 0.1,
@@ -110,7 +176,35 @@ class credits extends Phaser.Scene {
 
 
 
+// ANIMACION ESTRELLAS
+        const config = {
+            key: 'starAnimation',
+            frames: 'starAnimation',
+            frameRate: 16,
+            repeat: -1,
+            repeatDelay: 3000,
+        };
+
+        this.anims.create(config);
+
+        for (let i = 0; i < 15; i++)
+        {
+            let x = Phaser.Math.Between(this.sys.game.canvas.width, 0 );
+            let y = Phaser.Math.Between(0, this.sys.game.canvas.height);
+
+            let starAnimation = this.add.sprite(x, y, 'starAnimation', 23)
+            .setScale(2);
+
+            //  Each one can have a random start delay
+            starAnimation.play({
+                key: 'starAnimation',
+                delay: Math.random() * 6000,
+
+            });
+        }
     }
+
+
 
 
     update (time, delta)
