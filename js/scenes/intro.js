@@ -14,13 +14,6 @@ class intro extends Phaser.Scene {
     }
 
     preload() {
-        // @font-face {
-        // font-family: 'upheaval_tt_brkregular';
-        // src: url('./assets/fonts/upheavtt-webfont.woff2') format('woff2'),
-        //     url('./assets/fonts/upheavtt-webfont.woff') format('woff');
-        // font-weight: normal;
-        // font-style: normal;
-        // }
         this.load.image("panicLogo", "../../assets/images/panicLogo.png")
         .image("starSmall", "../../assets/images/starSmall.png")
         .image("starLarge", "../../assets/images/starLarge.png")
@@ -28,32 +21,12 @@ class intro extends Phaser.Scene {
         this.load.spritesheet("starAnimation", "../../assets/sprites/starAnimation.png", { frameWidth: 21, frameHeight: 21});
 
     }
- 
+
     create() {
         this.logo = this.add.image(this.sys.game.canvas.width /2 , 250, "panicLogo")
         .setScale(2.7);
 
-//ESTRELLAS ESTATICAS
 
-        // // PANIC STARS
-        // this.starSmall = this.add.image(this.logo.y - 85 , this.logo.height - 106, "starSmall")
-        // .setScale(2.7);
-
-        // this.starLarge = this.add.image(this.logo.y + 175 , this.logo.height - 105, "starLarge")
-        // .setScale(2.7);
-
-
-        // // SPACE STARS
-        // this.starLarge = this.add.image(this.logo.y - 170 , this.logo.height + 136, "starLarge")
-        // .setScale(2.7);
-
-        // this.starSmall = this.add.image(this.logo.y + 69 , this.logo.height + 51, "starSmall")
-        // .setScale(2.7);
-
-        // this.starSmall = this.add.image(this.logo.y + 260 , this.logo.height + 138, "starSmall")
-        // .setScale(2.7);
-
-//////////////////////
 
 
 //ESTRELLAS ANIMADAS
