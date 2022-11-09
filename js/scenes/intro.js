@@ -14,54 +14,54 @@ class intro extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image("panicLogo", "../../assets/sprites/panicLogo.png")
-        this.load.image("starSmall", "../../assets/sprites/starSmall.png")
-        this.load.image("starLarge", "../../assets/sprites/starLarge.png")
+        // this.load.image("panicLogo", "../../assets/sprites/panicLogo.png")
+        // this.load.image("starSmall", "../../assets/sprites/starSmall.png")
+        // this.load.image("starLarge", "../../assets/sprites/starLarge.png")
 
 
-        this.load.spritesheet("starAnimation", "../../assets/sprites/starAnimation.png", { frameWidth: 21, frameHeight: 21});
+        // this.load.spritesheet("starAnimation", "../../assets/sprites/starAnimation.png", { frameWidth: 21, frameHeight: 21});
 
     }
 
     create() {
-        this.logo = this.add.image(this.sys.game.canvas.width /2 , 250, "panicLogo")
-        .setScale(2.7);
+        // this.logo = this.add.image(this.sys.game.canvas.width /2 , 250, "panicLogo")
+        // .setScale(2.7);
 
 
 
 
 //ESTRELLAS ANIMADAS
 
-        const starAnimation = this.anims.create({
-            key: 'starAnimation',
-            frames: this.anims.generateFrameNumbers('starAnimation'),
-            frameRate: 16,
-            repeatDelay: 400
-        });
+        // const starAnimation = this.anims.create({
+        //     key: 'starAnimation',
+        //     frames: this.anims.generateFrameNumbers('starAnimation'),
+        //     frameRate: 16,
+        //     repeatDelay: 400
+        // });
 
 
-        // PANIC STARS
-        let panicStar1 = this.add.sprite(this.logo.y - 85 , this.logo.height - 106, "starAnimation")
-            .setScale(2.7)
-            .play({ key: 'starAnimation', repeat: -1 });
+        // // PANIC STARS
+        // let panicStar1 = this.add.sprite(this.logo.y - 85 , this.logo.height - 106, "starAnimation")
+        //     .setScale(2.7)
+        //     .play({ key: 'starAnimation', repeat: -1 });
 
-        let panicStar2 = this.add.sprite(this.logo.y + 175 , this.logo.height - 105, "starAnimation")
-            .setScale(2.7)
-            .play({ key: 'starAnimation', repeat: -1, delay: 200});
+        // let panicStar2 = this.add.sprite(this.logo.y + 175 , this.logo.height - 105, "starAnimation")
+        //     .setScale(2.7)
+        //     .play({ key: 'starAnimation', repeat: -1, delay: 200});
 
 
-        // // SPACE STARS
-        let spaceStar1 = this.add.sprite(this.logo.y - 170 , this.logo.height + 136, "starAnimation")
-            .setScale(2.7)
-            .play({ key: 'starAnimation', repeat: -1, delay: 350 });
+        // // // SPACE STARS
+        // let spaceStar1 = this.add.sprite(this.logo.y - 170 , this.logo.height + 136, "starAnimation")
+        //     .setScale(2.7)
+        //     .play({ key: 'starAnimation', repeat: -1, delay: 350 });
             
-        let spaceStar2 = this.add.sprite(this.logo.y + 69 , this.logo.height + 51, "starAnimation")
-            .setScale(2.7)
-            .play({ key: 'starAnimation', repeat: -1, delay: 200});
+        // let spaceStar2 = this.add.sprite(this.logo.y + 69 , this.logo.height + 51, "starAnimation")
+        //     .setScale(2.7)
+        //     .play({ key: 'starAnimation', repeat: -1, delay: 200});
 
-        let spaceStar3 = this.add.sprite(this.logo.y + 260 , this.logo.height + 138, "starAnimation")
-            .setScale(2.7)
-            .play({ key: 'starAnimation', repeat: -1 });
+        // let spaceStar3 = this.add.sprite(this.logo.y + 260 , this.logo.height + 138, "starAnimation")
+        //     .setScale(2.7)
+        //     .play({ key: 'starAnimation', repeat: -1 });
             
 
 
