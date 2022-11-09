@@ -12,7 +12,7 @@ class credits extends Phaser.Scene {
     }
     preload ()
     {
-        this.load.spritesheet("starAnimation", "../../assets/sprites/starAnimation.png", { frameWidth: 21, frameHeight: 21});
+        // this.load.spritesheet("starAnimation", "../../assets/sprites/starAnimation.png", { frameWidth: 21, frameHeight: 21});
 
     }
 
@@ -177,31 +177,31 @@ class credits extends Phaser.Scene {
 
 
 // ANIMACION ESTRELLAS
-        const config = {
-            key: 'starAnimation',
-            frames: 'starAnimation',
-            frameRate: 16,
-            repeat: -1,
-            repeatDelay: 3000,
-        };
+        // const config = {
+        //     key: 'starAnimation',
+        //     frames: 'starAnimation',
+        //     frameRate: 16,
+        //     repeat: -1,
+        //     repeatDelay: 3000,
+        // };
 
-        this.anims.create(config);
+        // this.anims.create(config);
 
-        for (let i = 0; i < 15; i++)
-        {
-            let x = Phaser.Math.Between(this.sys.game.canvas.width, 0 );
-            let y = Phaser.Math.Between(0, this.sys.game.canvas.height);
+        // for (let i = 0; i < 15; i++)
+        // {
+        //     let x = Phaser.Math.Between(this.sys.game.canvas.width, 0 );
+        //     let y = Phaser.Math.Between(0, this.sys.game.canvas.height);
 
-            let starAnimation = this.add.sprite(x, y, 'starAnimation', 23)
-            .setScale(2);
+        //     let starAnimation = this.add.sprite(x, y, 'starAnimation', 23)
+        //     .setScale(2);
 
-            //  Each one can have a random start delay
-            starAnimation.play({
-                key: 'starAnimation',
-                delay: Math.random() * 6000,
+        //     //  Each one can have a random start delay
+        //     starAnimation.play({
+        //         key: 'starAnimation',
+        //         delay: Math.random() * 6000,
 
-            });
-        }
+        //     });
+        // }
     }
 
 
