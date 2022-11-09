@@ -176,7 +176,7 @@ class credits extends Phaser.Scene {
 
 
 
-// ANIMACION ESTRELLAS
+// ANIMACION ESTRELLA
         // const config = {
         //     key: 'starAnimation',
         //     frames: 'starAnimation',
