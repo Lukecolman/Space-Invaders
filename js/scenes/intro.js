@@ -14,12 +14,7 @@ class intro extends Phaser.Scene {
     }
 
     preload() {
-        // this.load.image("panicLogo", "../../assets/sprites/panicLogo.png")
-        // this.load.image("starSmall", "../../assets/sprites/starSmall.png")
-        // this.load.image("starLarge", "../../assets/sprites/starLarge.png")
 
-
-        // this.load.spritesheet("starAnimation", "../../assets/sprites/starAnimation.png", { frameWidth: 21, frameHeight: 21});
 
     }
 
