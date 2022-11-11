@@ -159,18 +159,18 @@ class credits extends Phaser.Scene {
             //     // , 'Silkscreen'),
             //     fill: "white" });   
     
-            //     // tweens funciona para la interpolacion visible (parpadeos locos)
-            //     this.tweens.add({
-            //         targets: [this.introText2, this.introText],
-            //         alpha: 0.1,
-            //         // yoyo: true,
-            //                     duration: 4000,
+                // tweens funciona para la interpolacion visible (parpadeos locos)
+                this.tweens.add({
+                    targets: [this.introText2, this.introText],
+                    alpha: 0.1,
+                    // yoyo: true,
+                                duration: 4000,
     
-            //         // repeat: -1, //-1 = infinito
-            //         ease: 'Sine.easeInOut',
-            //         // duration: 350,
-            //         y: -350,
-            //     });
+                    // repeat: -1, //-1 = infinito
+                    ease: 'Sine.easeInOut',
+                    // duration: 350,
+                    y: -350,
+                });
     
         // INPUT DE TECLAS (un add event listener de Phaser)
         this.cursors = this.input.keyboard.createCursorKeys();
@@ -178,32 +178,32 @@ class credits extends Phaser.Scene {
 
 
 
-// ANIMACION ESTRELLA no more
-        // const config = {
-        //     key: 'starAnimation',
-        //     frames: 'starAnimation',
-        //     frameRate: 16,
-        //     repeat: -1,
-        //     repeatDelay: 3000,
-        // };
+// ANIMACION ESTRELLAs
+        const config = {
+            key: 'starAnimation',
+            frames: 'starAnimation',
+            frameRate: 16,
+            repeat: -1,
+            repeatDelay: 3000,
+        };
 
-        // this.anims.create(config);
+        this.anims.create(config);
 
-        // for (let i = 0; i < 15; i++)
-        // {
-        //     let x = Phaser.Math.Between(this.sys.game.canvas.width, 0 );
-        //     let y = Phaser.Math.Between(0, this.sys.game.canvas.height);
+        for (let i = 0; i < 15; i++)
+        {
+            let x = Phaser.Math.Between(this.sys.game.canvas.width, 0 );
+            let y = Phaser.Math.Between(0, this.sys.game.canvas.height);
 
-        //     let starAnimation = this.add.sprite(x, y, 'starAnimation', 23)
-        //     .setScale(2);
+            let starAnimation = this.add.sprite(x, y, 'starAnimation', 23)
+            .setScale(2);
 
-        //     //  Each one can have a random start delay
-        //     starAnimation.play({
-        //         key: 'starAnimation',
-        //         delay: Math.random() * 6000,
+            //  Each one can have a random start delay
+            starAnimation.play({
+                key: 'starAnimation',
+                delay: Math.random() * 6000,
 
-        //     });
-        // }
+            });
+        }
     }
 
 
