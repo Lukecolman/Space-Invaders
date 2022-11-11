@@ -12,7 +12,9 @@ class credits extends Phaser.Scene {
     }
     preload ()
     {
-        // this.load.spritesheet("starAnimation", "../../assets/sprites/starAnimation.png", { frameWidth: 21, frameHeight: 21});
+        // Nuevo Path de Assets
+        this.load.path = "./assets/";   
+        this.load.spritesheet("starAnimation", "../../assets/sprites/starAnimation.png", { frameWidth: 21, frameHeight: 21});
 
     }
 
