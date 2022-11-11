@@ -88,7 +88,7 @@ class intro extends Phaser.Scene {
     }
 
     preload() {
-
+        // nuevo path
             this.load.path = "./assets/";   
 
         this.load.image("panicLogo", "../../assets/sprites/panicLogo.png")
